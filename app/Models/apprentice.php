@@ -12,8 +12,17 @@ class Apprentice extends Model
 
     protected $table = 'apprentice';
 
-    public function course()
+    public function courses()
     {
         return $this->belongsTo(Course::class);
     }
+    public function course()
+{
+    return $this->belongsTo(Course::class);
+}
+
+public function computer()
+{
+    return $this->belongsTo(Computer::class);
+}
 }
